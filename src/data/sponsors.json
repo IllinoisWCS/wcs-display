@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Palantir",
+        "level": "Diamond",
+        "logoPath": "img/sponsors/palantir.png"
+    },
+    {
+        "name": "Wish",
+        "level": "Diamond",
+        "logoPath": "img/sponsors/wish.png"
+    },
+    {
+        "name": "Capital One",
+        "level": "Diamond",
+        "logoPath": "img/sponsors/capital-one.png"
+    },
+    {
+        "name": "Sunrise Futures",
+        "level": "Gold",
+        "logoPath": "img/sponsors/sunrise-futures.jpg"
+    },
+    {
+        "name": "Fitbit",
+        "level": "Gold",
+        "logoPath": "img/sponsors/fitbit.png"
+    },
+    {
+        "name": "Akuna Capital",
+        "level": "Gold",
+        "logoPath": "img/sponsors/akuna-capital.png"
+    },
+    {
+        "name": "Amazon",
+        "level": "Gold",
+        "logoPath": "img/sponsors/amazon.png"
+    },
+    {
+        "name": "Qualtrics",
+        "level": "Silver",
+        "logoPath": "img/sponsors/qualtrics.png"
+    },
+    {
+        "name": "Google",
+        "level": "Silver",
+        "logoPath": "img/sponsors/google.png"
+    },
+    {
+        "name": "Allston Trading",
+        "level": "Silver",
+        "logoPath": "img/sponsors/allston-trading.png"
+    }
+]

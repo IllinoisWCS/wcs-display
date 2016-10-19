@@ -1,0 +1,25 @@
+.mtd-panel {
+    width: 356px; // Same as events panel
+}
+
+.bus-item {
+    font-size: 1.5em;
+    line-height: 1.7em;
+
+    .bus-name {
+        display: inline;
+    }
+
+    .bus-mins {
+        display: inline;
+        float: right;
+    }
+}
+
+.mtd-body-no-departures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #999;
+}

@@ -1,0 +1,67 @@
+@import 'header';
+@import 'loading';
+@import 'panels/ads';
+@import 'panels/beats';
+@import 'panels/events';
+@import 'panels/meeting-times';
+@import 'panels/mtd';
+@import 'panels/sponsors';
+@import 'panels/sujay';
+@import 'panels/weather';
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#main {
+    width: 1920px;
+    height: 1080px;
+}
+
+.row {
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    > .panel:first-child {
+        margin-left: 0;
+    }
+}
+
+.row-primary {
+    height: 540px;
+}
+
+.row-secondary {
+    height: 265px;
+}
+
+.panel {
+    margin-left: 25px;
+    border: 1px solid #385461;
+    display: flex;
+    flex-direction: column;
+
+    .panel-heading {
+        padding: 10px;
+        background: linear-gradient(#2f86ae, #385461);
+        color: white;
+        flex-shrink: 0;
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 1.25em;
+        }
+    }
+
+    .panel-body {
+        padding: 10px;
+        flex-grow: 1;
+    }
+}
+
+.panel-fill {
+    flex-grow: 1;
+}
