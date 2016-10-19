@@ -1,13 +1,13 @@
-ACM Display
+WCS Display
 ===========
 
-Digital signage for the ACM Office television.
+Digital signage for the WCS Office television.
 
 Setup
 -----
 
 ```bash
-npm install
+yarn
 cd src
 cp secrets.js.sample secrets.js
 ```
@@ -21,8 +21,10 @@ Download a prebuilt binary of [Electron](https://github.com/atom/electron/releas
 
 ```bash
 npm run build
-/path/to/electron . # Replace with actual path to Electron binary
+electron . # Install Electron through npm / yarn
 ```
+
+When doing development, you can use the ```gulp watch``` feature to get livereloading in the browser before deploying.
 
 Raspberry Pi setup guide
 ------------------------

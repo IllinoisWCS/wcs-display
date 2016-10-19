@@ -3,7 +3,7 @@
 .header-container {
     width: 1920px;
     height: 200px;
-    background: linear-gradient(#2f86ae, #385461);
+    background: black;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -16,8 +16,8 @@
 }
 
 .header-logo {
-    width: 150px;
-    height: 150px;
+    width: auto;
+    height: 100px;
     margin-right: 20px;
 }
 

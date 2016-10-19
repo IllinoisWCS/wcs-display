@@ -1,28 +1,35 @@
 {
-    "name": "display",
-    "version": "0.0.1",
-    "author": "Kevin Wang <kevin@kevinwang.com>",
-    "scripts": {
-        "build": "gulp"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/acm-uiuc/display.git"
-    },
-    "main": "main.js",
-    "dependencies": {
-        "async": "1.5.x",
-        "babel-preset-react": "6.5.x",
-        "babelify": "7.2.x",
-        "browserify": "13.0.x",
-        "classnames": "2.2.x",
-        "gulp": "3.9.x",
-        "gulp-sass": "2.3.x",
-        "ical.js": "1.2.x",
-        "jquery": "2.2.x",
-        "moment": "2.12.x",
-        "react": "0.14.x",
-        "react-dom": "0.14.x",
-        "vinyl-source-stream": "1.1.x"
-    }
+  "name": "display",
+  "version": "0.0.1",
+  "author": "Kevin Wang <kevin@kevinwang.com>",
+  "contributors": [{
+      "name": "Sujay Khandekar",
+      "email": "sskhandek@gmail.com"
+  }],
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IllinoisWCS/wcs-display.git"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "async": "1.5.x",
+    "babel-preset-react": "6.5.x",
+    "babelify": "7.2.x",
+    "browserify": "13.0.x",
+    "classnames": "2.2.x",
+    "gulp": "3.9.x",
+    "gulp-sass": "2.3.x",
+    "ical.js": "1.2.x",
+    "jquery": "2.2.x",
+    "moment": "2.12.x",
+    "react": "0.14.x",
+    "react-dom": "0.14.x",
+    "vinyl-source-stream": "1.1.x"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.3"
+  }
 }

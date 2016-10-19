@@ -1,52 +1,34 @@
 [
     {
-        "name": "Palantir",
-        "level": "Diamond",
-        "logoPath": "img/sponsors/palantir.png"
+        "name": "3Red",
+        "logoPath": "img/sponsors/3red.jpg"
     },
     {
-        "name": "Wish",
-        "level": "Diamond",
-        "logoPath": "img/sponsors/wish.png"
+        "name": "Belvedere Trading",
+        "logoPath": "img/sponsors/belvedere.png"
     },
     {
-        "name": "Capital One",
-        "level": "Diamond",
-        "logoPath": "img/sponsors/capital-one.png"
+        "name": "CME Group",
+        "logoPath": "img/sponsors/cmegroup.jpg"
     },
     {
-        "name": "Sunrise Futures",
-        "level": "Gold",
-        "logoPath": "img/sponsors/sunrise-futures.jpg"
+        "name": "GoDaddy",
+        "logoPath": "img/sponsors/godaddy.jpg"
     },
     {
-        "name": "Fitbit",
-        "level": "Gold",
-        "logoPath": "img/sponsors/fitbit.png"
+        "name": "Groupon",
+        "logoPath": "img/sponsors/groupon.png"
     },
     {
-        "name": "Akuna Capital",
-        "level": "Gold",
-        "logoPath": "img/sponsors/akuna-capital.png"
+        "name": "Microsoft",
+        "logoPath": "img/sponsors/microsoft.png"
     },
     {
-        "name": "Amazon",
-        "level": "Gold",
-        "logoPath": "img/sponsors/amazon.png"
+        "name": "Optiver",
+        "logoPath": "img/sponsors/optiver.jpg"
     },
     {
-        "name": "Qualtrics",
-        "level": "Silver",
-        "logoPath": "img/sponsors/qualtrics.png"
-    },
-    {
-        "name": "Google",
-        "level": "Silver",
-        "logoPath": "img/sponsors/google.png"
-    },
-    {
-        "name": "Allston Trading",
-        "level": "Silver",
-        "logoPath": "img/sponsors/allston-trading.png"
+        "name": "pwc",
+        "logoPath": "img/sponsors/pwc.jpg"
     }
 ]

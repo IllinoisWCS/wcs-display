@@ -44,3 +44,6 @@ src/secrets.js
 
 # Vim swap file
 .*.swp
+
+# Yarn lock file
+yarn.lock
