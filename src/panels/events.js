@@ -6,7 +6,7 @@ var classNames = require('classnames');
 
 var time = require('../utils/time');
 
-var icalUrl = 'https://www-s.acm.illinois.edu/calendar/feed.ics';
+var icalUrl = 'https://calendar.google.com/calendar/ical/illinois.edu_tnb2alhjjgnl741dr51gbfr4gg%40group.calendar.google.com/public/basic.ics';
 var EVENTS_INTERVAL_MS = 60 * 1000;
 var ONE_DAY = new ICAL.Duration({days: 1});
 
