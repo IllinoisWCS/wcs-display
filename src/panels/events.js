@@ -1,7 +1,6 @@
 var React = require('react');
 var $ = require('jquery');
-var moment = require('moment');
-var momentTimezone = require('moment-timezone');
+var moment = require('moment-timezone');
 var classNames = require('classnames');
 
 var time = require('../utils/time');
@@ -37,7 +36,7 @@ var EventsPanel = React.createClass({
             dateComponents.push(date.format('MMM D'));
         }
         if (!isAllDay) {
-            dateComponents.push(date.format('h:mm a'));
+            dateComponents.push(time.formatTime(date.toDate()));
         }
         return dateComponents.join(' ');
     },
@@ -66,8 +65,8 @@ var EventsPanel = React.createClass({
             return <p>No upcoming events</p>;
         }
         return events.map(function(event) {
-            return <div className="event-item">
-                <div key={event.id} className="event-summary">{event.title}</div>
+            return <div key={event.id} className="event-item">
+                <div className="event-summary">{event.title}</div>
                 <div>{this.formatEventTime(event)}</div>
                 <div>{event.location}</div>
             </div>;
