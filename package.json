@@ -30,7 +30,6 @@
     "gulp-sass": "2.3.x",
     "jquery": "2.2.x",
     "moment": "2.12.x",
-    "moment-timezone": "0.5.x",
     "react": "0.14.x",
     "react-dom": "0.14.x",
     "vinyl-source-stream": "1.1.x"

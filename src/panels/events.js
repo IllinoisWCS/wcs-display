@@ -1,6 +1,6 @@
 var React = require('react');
 var $ = require('jquery');
-var moment = require('moment-timezone');
+var moment = require('moment');
 var classNames = require('classnames');
 
 var time = require('../utils/time');
@@ -46,10 +46,8 @@ var EventsPanel = React.createClass({
     },
 
     formatEventTime: function(event) {
-        start = moment.utc(event.startTime);
-        start.tz(event.timezone);
-        end = moment.utc(event.endTime);
-        end.tz(event.timezone);
+        start = moment(event.startTime);
+        end = moment(event.endTime);
         var startDateStr = this.formatDate(start, false, true, event.isAllDay);
         if (this.isSingleDay(event.isAllDay, start, end)) {
             return startDateStr;
