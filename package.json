@@ -2,10 +2,16 @@
   "name": "display",
   "version": "0.0.1",
   "author": "Kevin Wang <kevin@kevinwang.com>",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Sujay Khandekar",
       "email": "sskhandek@gmail.com"
-  }],
+    },
+    {
+      "name": "Emily Chao",
+      "email": "elchao96@live.com"
+    }
+  ],
   "scripts": {
     "build": "gulp"
   },
@@ -22,7 +28,6 @@
     "classnames": "2.2.x",
     "gulp": "3.9.x",
     "gulp-sass": "2.3.x",
-    "ical.js": "1.2.x",
     "jquery": "2.2.x",
     "moment": "2.12.x",
     "react": "0.14.x",
