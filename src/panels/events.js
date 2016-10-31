@@ -1,14 +1,13 @@
 var React = require('react');
 var $ = require('jquery');
-var ICAL = require('ical.js');
 var moment = require('moment');
+var momentTimezone = require('moment-timezone');
 var classNames = require('classnames');
 
 var time = require('../utils/time');
 
-var icalUrl = 'https://calendar.google.com/calendar/ical/illinois.edu_tnb2alhjjgnl741dr51gbfr4gg%40group.calendar.google.com/public/basic.ics';
+var eventsUrl = 'https://script.google.com/macros/s/AKfycbysZFMo4SZfZCtl9swTqD3M1PvyhLBD71qcrHheuoziX9FpJtpZ/exec';
 var EVENTS_INTERVAL_MS = 60 * 1000;
-var ONE_DAY = new ICAL.Duration({days: 1});
 
 /**
  * Events panel.
@@ -21,20 +20,8 @@ var EventsPanel = React.createClass({
     },
 
     updateEvents: function() {
-        $.get(icalUrl, function(data) {
-            var comp = new ICAL.Component(ICAL.parse(data));
-            var now = ICAL.Time.now();
-            var events = comp.getAllSubcomponents('vevent')
-                .map(function(vevent) {
-                    return new ICAL.Event(vevent);
-                })
-                .filter(function(vevent) {
-                    return vevent.endDate.compare(now) >= 1;
-                })
-                .sort(function(a, b) {
-                    return a.startDate.compare(b.startDate);
-                })
-                .slice(0, 5);
+        $.get(eventsUrl, function(data) {
+            var events = data.slice(0, 5);
             this.setState({events: events});
         }.bind(this));
     },
@@ -44,33 +31,32 @@ var EventsPanel = React.createClass({
         setInterval(this.updateEvents, EVENTS_INTERVAL_MS);
     },
 
-    formatDate: function(date, isEndDate, showDate) {
-        var jsDate = date.toJSDate();
-        if (isEndDate && date.isDate) {
-            jsDate.setDate(jsDate.getDate() - 1);
-        }
+    formatDate: function(date, isEndDate, showDate, isAllDay) {
         var dateComponents = [];
         if (showDate) {
-            dateComponents.push(moment(jsDate).format('MMM D'));
+            dateComponents.push(date.format('MMM D'));
         }
-        if (!date.isDate) {
-            dateComponents.push(time.formatTime(jsDate));
+        if (!isAllDay) {
+            dateComponents.push(date.format('h:mm a'));
         }
         return dateComponents.join(' ');
     },
 
-    isSingleDay: function(event) {
-        return event.startDate.isDate && event.duration.compare(ONE_DAY) === 0;
+    isSingleDay: function(isAllDay, start, end) {
+        return isAllDay && start.diff(end.subtract(1, 'day'), 'days') == 0;
     },
 
     formatEventTime: function(event) {
-        var startDateStr = this.formatDate(event.startDate, false, true);
-        if (this.isSingleDay(event)) {
+        start = moment.utc(event.startTime);
+        start.tz(event.timezone);
+        end = moment.utc(event.endTime);
+        end.tz(event.timezone);
+        var startDateStr = this.formatDate(start, false, true, event.isAllDay);
+        if (this.isSingleDay(event.isAllDay, start, end)) {
             return startDateStr;
         }
-        var isSameDay = event.startDate.compareDateOnlyTz(
-            event.endDate, ICAL.Timezone.localTimezone);
-        var endDateStr = this.formatDate(event.endDate, true, isSameDay);
+        var isSameDay = !start.isSame(end, 'day');
+        var endDateStr = this.formatDate(end, true, isSameDay, event.isAllDay);
         return startDateStr +  ' \u2013 ' + endDateStr;
     },
 
@@ -80,8 +66,8 @@ var EventsPanel = React.createClass({
             return <p>No upcoming events</p>;
         }
         return events.map(function(event) {
-            return <div key={event.uid} className="event-item">
-                <div className="event-summary">{event.summary}</div>
+            return <div className="event-item">
+                <div key={event.id} className="event-summary">{event.title}</div>
                 <div>{this.formatEventTime(event)}</div>
                 <div>{event.location}</div>
             </div>;

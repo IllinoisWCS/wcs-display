@@ -2,10 +2,16 @@
   "name": "display",
   "version": "0.0.1",
   "author": "Kevin Wang <kevin@kevinwang.com>",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Sujay Khandekar",
       "email": "sskhandek@gmail.com"
-  }],
+    },
+    {
+      "name": "Emily Chao",
+      "email": "elchao96@live.com"
+    }
+  ],
   "scripts": {
     "build": "gulp"
   },
@@ -25,6 +31,7 @@
     "ical.js": "1.2.x",
     "jquery": "2.2.x",
     "moment": "2.12.x",
+    "moment-timezone": "^0.5.7",
     "react": "0.14.x",
     "react-dom": "0.14.x",
     "vinyl-source-stream": "1.1.x"
