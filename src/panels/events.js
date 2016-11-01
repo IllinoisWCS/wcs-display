@@ -33,7 +33,7 @@ var EventsPanel = React.createClass({
     formatDate: function(date, isEndDate, showDate, isAllDay) {
         var dateComponents = [];
         if (showDate) {
-            dateComponents.push(date.format('MMM D'));
+            dateComponents.push(date.format('dddd, MMM D'));
         }
         if (!isAllDay) {
             dateComponents.push(time.formatTime(date.toDate()));
