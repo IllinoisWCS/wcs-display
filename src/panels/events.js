@@ -6,7 +6,7 @@ var classNames = require('classnames');
 var time = require('../utils/time');
 
 var eventsUrl = 'https://script.google.com/macros/s/AKfycbysZFMo4SZfZCtl9swTqD3M1PvyhLBD71qcrHheuoziX9FpJtpZ/exec';
-var EVENTS_INTERVAL_MS = 60 * 1000;
+var EVENTS_INTERVAL_MS = 10 * 60 * 1000;
 
 /**
  * Events panel.
