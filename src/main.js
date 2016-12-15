@@ -7,6 +7,7 @@ var SponsorsPanel = require('./panels/sponsors');
 var EventsPanel = require('./panels/events');
 var WelcomePanel = require('./panels/welcome')
 var FireplacePanel = require('./panels/fireplace');
+var IssuesPanel = require('./panels/githubissues');
 
 /**
  * Top-level dashboard component.
@@ -18,6 +19,7 @@ var Dashboard = React.createClass({
                 <Header />
                 <div className="row row-primary">
                     <WelcomePanel />
+                    <IssuesPanel />
                     <EventsPanel />
                 </div>
                 <div className="row row-secondary">

@@ -1,0 +1,40 @@
+.githubissues-panel {
+    width: 356px;
+    display: flex;
+
+    .githubissues-footer {
+        justify-content: flex-end; 
+        text-align: center;
+        margin: 20px 5px;
+    }
+}
+
+.githubissues-item {
+    margin: 20px 5px;
+    line-height: 1.5em;
+
+    .githubissues-title {
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+
+    .githubissues-number {
+        font-size: 1.5em;
+        color: $github-green;
+        margin-bottom: 5px;
+    }
+
+    .githubissues-assignee {
+        font-size: 1em;
+        font-style: italic;
+        color: #999;
+    }
+}
+
+.githubissues-body-no-issues {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #999;
+}
