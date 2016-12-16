@@ -3,6 +3,7 @@ var $ = require('jquery');
 var classNames = require('classnames');
 
 const ISSUES_INTERVAL_MS = 12 * 60 * 60 * 1000;
+const githubURL = 'https://api.github.com/repos/IllinoisWCS/IllinoisWCS.github.io/issues';
 
 /**
  * Github Issues panel.
@@ -16,10 +17,16 @@ var IssuesPanel = React.createClass({
 
     componentDidMount: function() {
         this.updateData();
+        setInterval(this.updateData, ISSUES_INTERVAL_MS);
     },
 
     updateData: function() {
-        setInterval(this.updateData, ISSUES_INTERVAL_MS);
+        $.getJSON(githubURL)
+             .then((data) => {
+                 this.setState({
+                     issues: data
+                 })
+             });
     },
     
     getIssues: function() {
