@@ -1,3 +1,7 @@
+// Variable Colors
+$maroon: rgb(125, 25, 53);
+$github-green: #6cc644;
+
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 @import 'header';
 @import 'loading';
@@ -10,9 +14,7 @@
 @import 'panels/weather';
 @import 'panels/welcome';
 @import 'panels/fireplace';
-
-// Variable Colors
-$maroon: rgb(125, 25, 53);
+@import 'panels/githubissues';
 
 body {
     margin: 0px;
