@@ -12,7 +12,8 @@ let mainWindow;
 
 function createWindow () {
     // Create the browser window.
-    mainWindow = new BrowserWindow({fullscreen: true});
+    const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize;
+    mainWindow = new BrowserWindow({width, height, fullscreen: true});
     mainWindow.setMenu(null);
 
     // and load the index.html of the app.
