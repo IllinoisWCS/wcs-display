@@ -2,7 +2,7 @@ var React = require('react');
 var $ = require('jquery');
 var classNames = require('classnames');
 
-const ISSUES_INTERVAL_MS = 12 * 60 * 60 * 1000;
+const ISSUES_INTERVAL_MS = 10 * 60 * 1000;
 const githubURL = 'https://api.github.com/repos/IllinoisWCS/IllinoisWCS.github.io/issues';
 
 /**
